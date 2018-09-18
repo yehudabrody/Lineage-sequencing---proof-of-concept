@@ -9,6 +9,7 @@ by ‘lineage sequencing’"
 Lineage sequencing utilizes knowledge of the cell lineage structure to reconstruct mutational events occurring during lineage formation with high resolution, accuracy, precision, and minimal bias. This scripts were used to analyse the two Lineages presented in the manuscript:
 1. HT115: a human colon cancer cell line with a DNA polymerase epsilon (POLE) proofreading deficiency
 2. RPE1: a human retinal epithelial cell line immortalized by constitutive telomerase expression.
+The original bam files (hg19) can be found at: https://www.ncbi.nlm.nih.gov/sra/SRP159787
 
 ### Running example code
 The scrpits were written in Python 2.7 on Jupyter notebook, and demonstrates step-by-step analysis of the data.
