@@ -22,5 +22,15 @@ We used Mutect1 as variant callers, which run for every pair of sub clones twice
 
 #### Step 2:
 ##### lineage_to_called variants_(active_search).ipynb
+In the “optical tracking -> lineage -> called variants” approach, the lineage structure was determined by analysis of time lapse imaging of cells in the microfluidic trap array device. This lineage structure was subsequently used for calling branch variants. SNVs were grouped as coincident SNVs and branch variants called by evaluating the coincident SNV quality score for the highest scoring group of sub clones over all the groups of sub clones consistent with the lineage structure determined by time lapse imaging, including the option that an SNV is only truly present in a single sub clone and represents a leaf variant. 
+
+Coincident SNV Quality Score = (MAX P clusters (Min P sample (P1/(P1+P2))).
+
+
+
+#### Step 3:
+##### Raw variants_to_Lineage_to_called variants.ipynb
+In the “raw variants -> lineage -> called variants” approach, we used the shotgun sequence data to estimate the most likely lineage structure in each lineage experiment. This was accomplished by identifying coincident SNVs by analysis of raw SNV calls. Sub clones sharing the same SNVs were grouped without restrictions by hierarchical clustering and for each coincident SNV, the quality score was calculated as before:
+        Coincident SNV Quality Score = (Min P samples (P1/(P1+P2)))
 
 
